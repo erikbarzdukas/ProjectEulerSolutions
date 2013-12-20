@@ -1,0 +1,10 @@
+CFLAGS = -Wall -g
+
+all:
+	cc -Wall -g p1.c -o p1
+	cc -Wall -g p2.c -o p2
+
+clean:
+	rm -f p1
+	rm -f p2
+	

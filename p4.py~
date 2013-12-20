@@ -1,0 +1,38 @@
+#  Largest palindrome from product of 2 3 three digit numbers
+#
+#
+
+def check_palindrome(num):
+    #take num
+    #split into array
+    #compare each index in array with opposite
+    #return True or False
+
+    palindrome = []
+
+    for val in str(num):
+        palindrome.append(val)        
+
+    for i in palindrome:
+
+        if palindrome[i] != palindrome[-i-1]
+            return False
+            break
+        else:
+            return True
+        #print palindrome[i]
+        #print palindrome[len(palindrome)-(i+1)]
+
+def return_max(data):
+
+    maxval = data[0]
+
+    for i in data:
+        if data[i] >= maxval:
+            maxval = data[i]
+
+    return maxval
+
+
+check_palindrome(12345)
+check_palindrome(123454321)
