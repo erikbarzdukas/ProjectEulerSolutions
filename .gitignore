@@ -1,2 +1,5 @@
 *.pyc
 Makefile
+*.py~
+*.swo
+*.swp
