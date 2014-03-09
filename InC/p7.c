@@ -1,32 +1,35 @@
 /*         
  *         Project Euler problem 7 solution
- *         IN PROGRESS                 
+ *         IN PROGRESS
+ *         math library not linking, will come back to                 
  */
 
 #include <stdio.h>
 #include <math.h>
-#include <dbg.h>
+#include "dbg.h"
 
 
 int primeChecker(int guess) {
 		
-	check(guess <= 0, "Tried to check a negative int");
+	check(guess >= 0, "Tried to check a negative int");
+	double squareRoot = sqrt((double)guess);
+	
 	if(guess % 2 == 0) {
-		return 0;
-	} else if (guess <= 1) {
 		return 0;
 	}
 
 	// cycle through the long way
 	int i;
 
-	for(i = 2; i < sqrt(guess); i++) {
+	for(i = 2; i <= squareRoot; i++) {
 		if(guess % i == 0) {
 			return 0;
 		}
 	}
 
 	return 1;
+error:
+	return 0;
 }
 
 int main(int argc, char *argv[]) {
@@ -44,4 +47,6 @@ int main(int argc, char *argv[]) {
 			printf("Project Euler 7 solution: %ld\n", answer);
 		}
 	}
+
+	return 0;
 }
