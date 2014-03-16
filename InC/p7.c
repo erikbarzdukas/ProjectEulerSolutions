@@ -29,7 +29,7 @@ int primeChecker(int guess) {
 
 	return 1;
 error:
-	return 0;
+	return -1;
 }
 
 int main(int argc, char *argv[]) {
