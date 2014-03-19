@@ -7,15 +7,14 @@ int primeCheck(int a) {
 	int i = 2;
 	
 	if (a % 2 == 0) {
-		printf("[NONPRIME]\t%d\n", a);
 		return 0;
 	}
 	
 	while (i <= sqrt((double)a)) {
 		if (a % i == 0) {
-			printf("[NONPRIME]\t%d\n", a);
-			return 0 ;
+			return 0;
 		}
+		i++;
 	}
 	printf("[PRIME]\t%d\n", a);
 	return 1;
