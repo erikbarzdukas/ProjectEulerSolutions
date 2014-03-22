@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     int sum;
     int i = 0;
     
@@ -9,10 +8,8 @@ int main(int argc, char *argv[])
         
         if( i % 3 == 0 || i % 5 == 0){
             sum = sum + i;
-        } else {
-            continue;        
-    	}  
-    }
+        }
+    }  
     
     printf("The sum of all the multiples of 3 or 5 below 1000 is: %d\n", sum);
 
